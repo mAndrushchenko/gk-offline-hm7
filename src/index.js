@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import TodosByClass from './TodosByClass';
+import TodosByHooks from './TodosByHooks';
+import image from './background.jpg'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <>
+        <img src={image} alt=""/>
+        <div className="todos">
+            <div className="by-class" >
+                <h1>Using classes</h1>
+                <TodosByClass />
+            </div>
+            <div className="by-hooks">
+                <h1>Using hooks</h1>
+                <TodosByHooks/>
+            </div>
+
+        </div>
+    </>
+    ,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
